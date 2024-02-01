@@ -58,6 +58,7 @@ iframe{
     border-radius: 5px;
     font-weight: bolder;
     font-size: 20px;
+    transition: all 0.5s;
 }
 
 .menuSuperiorBody nav a:hover{
@@ -114,10 +115,10 @@ iframe{
 }
 
 .videojuegosBody td{
-    height: 94px;
+    height: 188px;
     width: 50%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .videojuegosBody h1{
@@ -127,7 +128,7 @@ iframe{
 
 .categoria{
     width: 100%;
-    height: 84px;
+    height: 168px;
     border-radius: 15px;
     background-color: var(--blanco);
     margin-left: auto;
@@ -135,6 +136,7 @@ iframe{
     border-width: 3px;
     border-color: var(--blanco);
     border-style: solid;
+    transition: all 1s;
 }
 
 .categoria:hover{
@@ -148,18 +150,17 @@ iframe{
 .categoria h2{
     font-size: 24px;
     margin-left: 5vw;
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin-top: 60px;
     color: var(--negro);
     font-weight: bolder;
 }
 
 .prueba{
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     background-color:var(--negro);
     float: left;
-    margin: 10px;
+    margin: 20px;
 }
 /*Registro*/
 .registroContenedor{
