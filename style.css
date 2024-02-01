@@ -1,10 +1,18 @@
+html{
+    --blanco: #edf2f4;
+    --claro: #beffeb;
+    --oscuro: #15c984;
+    --negro: #2a2438;
+    --gris: #8d99ae;
+}
+
 body{
     margin: 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 a{
-    color: #dcdcdc;
+    color: var(--blanco);
     text-decoration: none;
 }
 
@@ -22,9 +30,9 @@ iframe{
 }
 
 .menuSuperiorBody{
-    background-color: #202020;
+    background-color: var(--negro);
     padding-left: 20px;
-    color: #dcdcdc;
+    color: var(--blanco);
 }
 
 .menuSuperiorBody h1{
@@ -50,7 +58,7 @@ iframe{
 }
 
 .menuSuperiorBody nav a:hover{
-    background-color: #313131;
+    background-color: var(--oscuro);
 }
 
 /*---Menu Lateral---*/
@@ -62,34 +70,33 @@ iframe{
 }
 
 .menuLateralBody{
-    background-color: #313131;
+    background-color: var(--gris);
     padding-left: 20px;
-    color: #dcdcdc;
+    color: var(--blanco);
 }
 
 /*---Main---*/
 .main{
     position: fixed;
     margin-top: 80px;
-    margin-left: 20%;
-    width: 80%;
+    width: 100vw;
     height: 100vh;
 }
 
 .mainBody{
-    background-color: #424242;
+    background-color: var(--blanco);
     padding-left: 20px;
-    color: #dcdcdc;
+    color: var(--negro);
 }
 
 /*Videojuegos*/
 .videojuegosBody{
-    background-color: #424242;
-    color: #dcdcdc;
+    background-color: var(--claro);
+    color: var(--negro);
 }
 
 .videojuegosContenedor{
-    background-color: #313131;
+    background-color: var(--blanco);
     margin-left: auto;
     margin-right: auto;
     padding-top: 80px;
@@ -119,16 +126,16 @@ iframe{
     width: 100%;
     height: 84px;
     border-radius: 5px;
-    background-color: #424242;
+    background-color: var(--blanco);
     margin-left: auto;
     margin-right: auto;
-    border-width: 1px;
-    border-color: #424242;
+    border-width: 3px;
+    border-color: var(--oscuro);
     border-style: solid;
 }
 
 .categoria:hover{
-    border-color: #dcdcdc;
+    border-color: var(--blanco);
 }
 
 .categoria h2{
@@ -136,18 +143,20 @@ iframe{
     margin-left: 5vw;
     margin-top: 25px;
     margin-bottom: 35px;
+    color: var(--negro);
+    font-weight: bolder;
 }
 
 .prueba{
     width: 64px;
     height: 64px;
-    background-color:#202020;
+    background-color:var(--negro);
     float: left;
     margin: 10px;
 }
 /*Registro*/
 .registroContenedor{
-    background-color: #313131;
+    background-color: var(--blanco);
     margin-left: auto;
     margin-right: auto;
     padding-top: 80px;
@@ -175,21 +184,21 @@ iframe{
 .registroContenedor td,tr,table{
     border-width: 1px;
     border-style: solid;
-    border-color: #dcdcdc;
+    border-color: var(--blanco);
     border-collapse: collapse;
 }
 
 /*scrollbar*/
 *::-webkit-scrollbar{
-    background: #424242;
+    background: var(--negro);
     width: 8px;
 }
 
 *::-webkit-scrollbar-thumb{
-    background: #313131;
+    background: var(--blanco);
     border-radius: 100px;
 }
 
 *::-webkit-scrollbar-thumb:hover{
-    background: #202020;
+    background: var(--rojo);
 }
