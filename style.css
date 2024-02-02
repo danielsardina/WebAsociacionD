@@ -1,9 +1,10 @@
 html{
-    --blanco: #d2dbd7;
+    --blanco: #ffffff;
     --claro: #bbbbbb;
     --oscuro: #cf2b15;
     --negro: #2a2438;
     --gris: #8d99ae;
+    --grisOscuro: #3a334b;
 }
 
 body{
@@ -162,6 +163,7 @@ iframe{
     float: left;
     margin: 20px;
 }
+
 /*Registro*/
 .registroContenedor{
     background-color: var(--blanco);
@@ -179,7 +181,7 @@ iframe{
 }
 
 .registroContenedor td{
-    height: 45px;
+    height: 64px;
     font-size: 24px;
     font-weight: bolder;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -187,13 +189,55 @@ iframe{
     padding-left: 5px;
     padding-right: 5px;
     text-align: center;
+    padding-bottom: 30px;
 }
 
 .registroContenedor td,tr,table{
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--blanco);
     border-collapse: collapse;
+}
+
+.registroContenedor tr{
+    border-bottom: var(--negro) 1px solid;
+}
+
+.registroContenedor input, select, textarea{
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 100px;
+    border-color: var(--oscuro);
+    background-color: var(--negro);
+    color: var(--blanco);
+    width: 80%;
+}
+
+.registroContenedor textarea{
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.registroContenedor input:hover, select:hover, textarea:hover{
+    background-color: var(--grisOscuro);
+}
+
+.registroContenedor input[type="email"]{
+    width: 95%;
+}
+
+.registroContenedor input[type="checkbox"]{
+    width: auto;
+}
+
+.registroContenedor input[type="submit"]{
+    width: 20%;
+}
+
+.registroContenedor input[type="reset"]{
+    width: 20%;
+}
+
+.registroContenedor span{
+    color: var(--oscuro);
+    font-weight: normal;
 }
 
 /*scrollbar*/
@@ -203,10 +247,10 @@ iframe{
 }
 
 *::-webkit-scrollbar-thumb{
-    background: var(--blanco);
+    background: var(--grisOscuro);
     border-radius: 100px;
 }
 
 *::-webkit-scrollbar-thumb:hover{
-    background: var(--rojo);
+    background: var(--oscuro);
 }

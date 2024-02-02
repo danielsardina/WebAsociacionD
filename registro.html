@@ -13,10 +13,84 @@
             <form>
                 <table>
                     <tr>
-                        <td><label for="nombre">Nombre</label></td>
-                        <td><label for="apellido1">Primer apellido</label></td>
-                        <td><label for="apellido2">Sgeundo apellido</label></td>
-                        <td><label for="dni">DNI</label></td>
+                        <td>
+                            <label for="nombre">Nombre</label>
+                            <br>
+                            <input type="text" id="nombre">
+                        </td>
+                        <td>
+                            <label for="apellido1">Primer apellido</label>
+                            <br>
+                            <input type="text" id="apellido1">
+                        </td>
+                        <td>
+                            <label for="apellido2">Sgeundo apellido</label>
+                            <br>
+                            <input type="text" id="apellido2">
+                        </td>
+                        <td>
+                            <label for="dni">DNI</label>
+                            <br>
+                            <input type="text" id="dni">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="email">Correo electronico</label>
+                            <br>
+                            <input type="email" id="email">
+                        </td>
+                        <td>
+                            <label for="tel">Telefono</label>
+                            <br>
+                            <input type="tel" id="tel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="estado">Estado civil</label>
+                            <br>
+                            <select name="estado" id="estado">
+                                <option value="soltero">soltero</option>
+                                <option value="casado">casado</option>
+                                <option value="divorciado">divorciado</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="disponibilidad">Disponibilidad</label>
+                            <br>
+                            <select name="disponibilidad" id="disponibilidad">
+                                <option value="lunes">Lunes</option>
+                                <option value="martes">Martes</option>
+                                <option value="miercoles">Miercoles</option>
+                                <option value="jueves">Jueves</option>
+                                <option value="viernes">Viernes</option>
+                            </select>
+                        </td>
+                        <td colspan="2">
+                            <label for="motivacion">Motivacion</label>
+                            <br>
+                            <select name="motivacion" id="motivacion">
+                                <option value="participar">Participar en actividades</option>
+                                <option value="preparar">Preparar actividades</option>
+                                <option value="acompanar">Acompañar a un menor</option>
+                                <option value="curiosidad">Curiosidad por la asociacion</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="observaciones">Observaciones</label></td>
+                        <td colspan="3"><textarea name="observaciones" id="observaciones" cols="100" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <label for="condiciones">Aceptar condiciones de la asociacion</label>
+                            <input type="checkbox" id="condiciones">
+                            <br>
+                            <input type="submit">
+                            <input type="reset">
+                        </td>
                     </tr>
                 </table>
             </form>
