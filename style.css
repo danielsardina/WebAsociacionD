@@ -23,6 +23,43 @@ iframe{
     float: left;
 }
 
+/*Animaciones*/
+@keyframes desplazarDerecha{
+    from{
+        transform: translateX(-80%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes desplazarIzquierda{
+    from{
+        transform: translateX(80%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes agrandar{
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
 /*---Menu superior---*/
 .menuSuperior{
     position: fixed;
@@ -83,6 +120,7 @@ iframe{
 /*---Main---*/
 .main{
     position: fixed;
+    margin: 0px;
     margin-top: 80px;
     width: 100vw;
     height: 100vh;
@@ -92,6 +130,54 @@ iframe{
     background-color: var(--blanco);
     padding-left: 20px;
     color: var(--negro);
+    padding: 0px;
+}
+
+.mainBody header h1{
+    animation-name: aparecer;
+    animation-duration: 2s;
+    text-align: center;
+    font-size: 64px;
+    font-weight: bolder;
+    color: var(--blanco);
+    overflow: hidden;
+}
+
+.mainBody header{
+    background-color: var(--grisOscuro);
+    width: 100vw;
+    height: 256px;
+    margin-top: -44px;
+    margin-bottom: 30px;
+    padding-top: 128px;
+}
+
+.contenedorRojo, .contenedorNegro{
+    height: 512px;
+    width: 80%;
+    border-radius: 15px;
+    color: var(--blanco);
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.contenedorRojo{
+    animation-name: desplazarDerecha;
+    animation-duration: 1s;
+    background-color: var(--oscuro);
+    margin-bottom: 32px;
+    margin-left: -32px;
+    float: left;
+}
+
+.contenedorNegro{
+    animation-name: desplazarIzquierda;
+    animation-duration: 1s;
+    background-color: var(--negro);
+    margin-bottom: 32px;
+    margin-right: -32px;
+    padding-right: 64px;
+    float: right;
 }
 
 /*Videojuegos*/
@@ -128,6 +214,8 @@ iframe{
 }
 
 .categoria{
+    animation-name: aparecer;
+    animation-duration: 1.5s;
     width: 100%;
     height: 168px;
     border-radius: 15px;
@@ -137,7 +225,8 @@ iframe{
     border-width: 3px;
     border-color: var(--blanco);
     border-style: solid;
-    transition: all 1s;
+    transition-property: background-color, color;
+    transition-duration: 1.5s;
 }
 
 .categoria:hover{
