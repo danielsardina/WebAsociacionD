@@ -23,6 +23,14 @@ iframe{
     float: left;
 }
 
+.centrado{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: var(--claro);
+}
+
 /*Animaciones*/
 @keyframes desplazarDerecha{
     0%{
@@ -114,6 +122,19 @@ iframe{
     background-color: var(--oscuro);
 }
 
+/*footer*/
+.footer{
+    width: 100%;
+    height: 256px;
+    z-index: 1;
+}
+
+.footerBody{
+    background-color: var(--negro);
+    padding-left: 20px;
+    color: var(--blanco);
+}
+
 /*---Menu Lateral---*/
 .menuLateral{
     position: fixed;
@@ -161,6 +182,7 @@ iframe{
     margin-top: -44px;
     margin-bottom: 30px;
     padding-top: 128px;
+    box-shadow: var(--negro) 0px 5px 25px;
 }
 
 .contenedorRojo, .contenedorNegro{
@@ -329,6 +351,10 @@ iframe{
     animation-delay: 1.2s;
 }
 
+.registroContenedor table tr:nth-of-type(6){
+    animation-delay: 1.5s;
+}
+
 .registroContenedor input, select, textarea{
     border-width: 3px;
     border-style: solid;
@@ -367,6 +393,10 @@ iframe{
 .registroContenedor span{
     color: var(--oscuro);
     font-weight: normal;
+}
+
+#otro{
+    display: none;
 }
 
 /*scrollbar*/

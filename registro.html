@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body class="videojuegosBody">
     <iframe src="menuSuperior.html" class="menuSuperior"></iframe>
     <main>
         <div class="registroContenedor">
             <h1>Registro</h1>
-            <form>
+            <form action="mailto:admin@asociacion.org">
                 <table>
                     <tr>
                         <td>
                             <label for="nombre">Nombre</label>
                             <br>
-                            <input type="text" id="nombre">
+                            <input type="text" id="nombre" required>
                         </td>
                         <td>
                             <label for="apellido1">Primer apellido</label>
@@ -31,19 +32,19 @@
                         <td>
                             <label for="dni">DNI</label>
                             <br>
-                            <input type="text" id="dni">
+                            <input type="text" id="dni" pattern="[0-9]{8}[A-Z]" required>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
                             <label for="email">Correo electronico</label>
                             <br>
-                            <input type="email" id="email">
+                            <input type="email" id="email" pattern="*@*" required>
                         </td>
                         <td>
                             <label for="tel">Telefono</label>
                             <br>
-                            <input type="tel" id="tel">
+                            <input type="tel" id="tel" pattern="[0-9]{9}">
                         </td>
                     </tr>
                     <tr>
@@ -70,13 +71,19 @@
                         <td colspan="2">
                             <label for="motivacion">Motivacion</label>
                             <br>
-                            <select name="motivacion" id="motivacion">
+                            <select name="motivacion" id="motivacion" onchange="mostrarOtro()">
                                 <option value="participar">Participar en actividades</option>
                                 <option value="preparar">Preparar actividades</option>
                                 <option value="acompanar">Acompañar a un menor</option>
                                 <option value="curiosidad">Curiosidad por la asociacion</option>
                                 <option value="otro">Otro</option>
                             </select>
+                            <div id="otro">
+                                <br>
+                                <label for="otro">Escribe tu motivacion</label>
+                                <br>
+                                <input type="text" name="otro">
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -86,7 +93,7 @@
                     <tr>
                         <td colspan="4">
                             <label for="condiciones">Aceptar condiciones de la asociacion</label>
-                            <input type="checkbox" id="condiciones">
+                            <input type="checkbox" id="condiciones" required>
                             <br>
                             <input type="submit">
                             <input type="reset">

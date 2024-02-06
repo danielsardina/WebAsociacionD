@@ -9,27 +9,58 @@
     <iframe src="menuSuperior.html" class="menuSuperior" id="superior"></iframe>
     <main>
         <div class="registroContenedor">
-            <h1>Registro</h1>
+            <h1>Contacto</h1>
             <table>
                 <tr>
-                    <td>
+                    <td colspan="3">
                         Correo de la administracion:
                         <br>
                         <span>algo@mail.com</span>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td colspan="3">
                         Direccion
                         <br>
                         <span>C. nose, Nº 123</span>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td colspan="3">
                         Informacion personal
                         <br>
                         <span>autor: Daniel Sardina</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Imagenes de los alrededores
+                        <br>
+                        <div class="centrado">
+                            <div class="prueba"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <form>
+                        <td>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre">
+                        </td>
+                        <td>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" pattern="*@*" required>
+                        </td>
+                        <td>
+                            <label for="mensaje">Mensaje</label>
+                            <input type="text" name="mensaje" required>
+                        </td>
+                    </form>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="submit">
+                        <input type="reset">
                     </td>
                 </tr>
             </table>
