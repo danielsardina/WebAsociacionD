@@ -23,6 +23,10 @@ iframe{
     float: left;
 }
 
+img{
+    image-rendering: pixelated;
+}
+
 .centrado{
     text-align: center;
     margin-left: auto;
@@ -35,28 +39,28 @@ iframe{
 @keyframes desplazarDerecha{
     0%{
         transform: translateX(-80%);
-        height: 64px;
+        height: 96px;
     }
     50%{
         transform: translateX(0%);
-        height: 64px;
+        height: 96px;
     }
     100%{
-        height: 512px;
+        height: 384px;
     }
 }
 
 @keyframes desplazarIzquierda{
     0%{
         transform: translateX(80%);
-        height: 64px;
+        height: 96px;
     }
     50%{
         transform: translateX(0%);
-        height: 64px;
+        height: 96px;
     }
     100%{
-        height: 512px;
+        height: 384px;
     }
 }
 
@@ -165,6 +169,24 @@ iframe{
     padding: 0px;
 }
 
+.mainBody h2{
+    font-size: 32px;
+}
+.mainBody p{
+    font-size: 24px;
+}
+
+.mainBody img{
+    animation-name: aparecer;
+    animation-delay: 1.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    width: 256px;
+    height: 256px;
+    margin-right: 64px;
+}
+
 .mainBody header h1{
     animation-name: aparecer;
     animation-duration: 2s;
@@ -186,7 +208,7 @@ iframe{
 }
 
 .contenedorRojo, .contenedorNegro{
-    height: 512px;
+    height: 384px;
     width: 80%;
     border-radius: 15px;
     color: var(--blanco);
@@ -210,6 +232,14 @@ iframe{
     margin-bottom: 32px;
     margin-right: -32px;
     padding-right: 64px;
+    float: right;
+}
+
+.contenedorRojo img{
+    float: left;
+}
+
+.contenedorNegro img{
     float: right;
 }
 
@@ -283,10 +313,9 @@ iframe{
     font-weight: bolder;
 }
 
-.prueba{
+.categoria img{
     width: 128px;
     height: 128px;
-    background-color:var(--negro);
     float: left;
     margin: 20px;
 }
