@@ -131,6 +131,11 @@ img{
     width: 100%;
     height: 256px;
     z-index: 1;
+    animation-name: aparecer;
+    animation-delay: 1.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
 }
 
 .footerBody{
@@ -167,6 +172,22 @@ img{
     padding-left: 20px;
     color: var(--negro);
     padding: 0px;
+}
+
+.mainBody a{
+    animation-name: aparecer;
+    animation-delay: 1.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-radius: 100px;
+    font-size: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 48px;
+    font-weight: bolder;
+    opacity: 0%;
 }
 
 .mainBody h2{
@@ -241,6 +262,27 @@ img{
 
 .contenedorNegro img{
     float: right;
+}
+
+.contenedorRojo a{
+    background-color: var(--blanco);
+    transition: all 0.5s;
+    color: var(--oscuro);
+}
+
+.contenedorRojo a:hover{
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.contenedorNegro a{
+    background-color: var(--oscuro);
+    transition: all 0.5s;
+}
+
+.contenedorNegro a:hover{
+    background-color: var(--blanco);
+    color: var(--oscuro);
 }
 
 /*---Videojuegos---*/
