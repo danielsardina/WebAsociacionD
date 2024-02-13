@@ -1,16 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="autor" content="Daniel Sardina">
+    <title>Actividades</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body class="videojuegosBody">
-    <iframe src="menuSuperior.html" class="menuSuperior" id="superior"></iframe>
+    <iframe src="menuSuperior.html" class="menuSuperior"></iframe>
     <main>
         <div class="videojuegosContenedor">
             <h1>Actividades</h1>
+            <table class="calendario">
+                <tr class="dias">
+                    <td>lunes</td>
+                    <td>Martes</td>
+                    <td>Miercoles</td>
+                    <td>Jueves</td>
+                    <td>Viernes</td>
+                </tr>
+                <tr class="actividades">
+                    <td>
+                        <button class="crear" onclick="anadirActividad('lunes')">+</button>
+                        <div id="lunes">
+                            <p>Actividad</p>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="crear" onclick="anadirActividad('martes')">+</button>
+                        <div id="martes">
+                            <p>Charla</p>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="crear" onclick="anadirActividad('miercoles')">+</button>
+                        <div id="miercoles">
+                        </div>
+                    </td>
+                    <td>
+                        <button class="crear" onclick="anadirActividad('jueves')">+</button>
+                        <div id="jueves">
+                            <p>Concurso</p>
+                            <p>Actividad</p>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="crear" onclick="anadirActividad('viernes')">+</button>
+                        <div id="viernes">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="contenedorActividades">
+                <div class="contenedor1">
+                    <h2>Charlas</h2>
+                    <img src="img/logo.png">
+                </div>
+                <div class="contenedor2">
+                    <h2>Concursos</h2>
+                    <img src="img/logo.png">
+                </div>
+                <div class="contenedor3">
+                    <h2>Otras Actividades</h2>
+                    <img src="img/logo.png">
+                </div>
+            </div>
         </div>
     </main>
+    <footer>
+        <iframe src="footer.html" class="footer"></iframe>
+    </footer>
 </body>
 </html>

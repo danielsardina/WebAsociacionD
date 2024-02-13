@@ -7,3 +7,8 @@ function mostrarOtro(){
         otro.style.display = "none";
     }
 }
+
+function anadirActividad(iDdia){
+    var dia = document.getElementById(iDdia);
+    dia.innerHTML += "<p>" + prompt("Nombre de la actividad") + "</p>";
+}

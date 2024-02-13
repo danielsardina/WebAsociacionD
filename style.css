@@ -32,7 +32,6 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    background-color: var(--claro);
 }
 
 /*Animaciones*/
@@ -79,6 +78,17 @@ img{
     }
     to{
         transform: scale(100%);
+    }
+}
+
+@keyframes ascenderYAparecer{
+    from{
+        opacity: 0%;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 100%;
+        transform: translateY(0%);
     }
 }
 
@@ -140,8 +150,24 @@ img{
 
 .footerBody{
     background-color: var(--negro);
-    padding-left: 20px;
+    padding: 20px;
     color: var(--blanco);
+}
+
+.footerBody a{
+    text-decoration: underline;
+}
+
+.izquierda{
+    float: left;
+}
+
+.derecha{
+    float: right;
+}
+
+.enlaces{
+    text-align: left;
 }
 
 /*---Menu Lateral---*/
@@ -244,6 +270,7 @@ img{
     margin-bottom: 32px;
     margin-left: -32px;
     float: left;
+    transition: transform 0.5s;
 }
 
 .contenedorNegro{
@@ -254,6 +281,15 @@ img{
     margin-right: -32px;
     padding-right: 64px;
     float: right;
+    transition: transform 0.5s;
+}
+
+.contenedorRojo:hover{
+    transform: translateX(1%);
+}
+
+.contenedorNegro:hover{
+    transform: translateX(-1%);
 }
 
 .contenedorRojo img{
@@ -324,6 +360,7 @@ img{
     view-timeline-name: --categoria;
     view-timeline-axis: block;
     animation-timeline: --categoria;
+    animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
     animation-name: aparecer;
     width: 100%;
@@ -468,6 +505,142 @@ img{
 
 #otro{
     display: none;
+}
+
+/*Actividades*/
+.calendario table, .calendario tr,.calendario td{
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+.calendario td{
+    width: 20%;
+}
+
+.dias td{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 32px;
+    background-color: var(--oscuro);
+    font-size: 24px;
+    color: var(--blanco);
+    font-weight: bolder;
+    text-align: center;
+    border-color: var(--blanco);
+    transition: all 0.5s;
+}
+
+.dias td:hover{
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.actividades td{
+    vertical-align: top;
+    transition: all 0.5s;
+}
+
+.actividades td:hover .crear{
+    display: block;
+}
+
+
+.crear{
+    width: 48px;
+    height: 48px;
+    float: right;
+    vertical-align: bottom;
+    margin-top: 8px;
+    font-weight: bolder;
+    color: var(--blanco);
+    background-color: var(--oscuro);
+    font-size: 40px;
+    border-radius: 100px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--oscuro);
+    transition: all 0.5s;
+    display: none;
+}
+
+.crear:hover{
+    background-color: var(--blanco);
+    color: var(--oscuro);
+}
+
+.contenedorActividades{
+    height: 384px;
+    width: 100%;
+    margin: 32px;
+    overflow-y: hidden;
+}
+
+.contenedorActividades h2{
+    color: var(--blanco);
+}
+
+.contenedorActividades img{
+    width: 128px;
+    height: 128px;
+}
+
+.contenedor1, .contenedor2, .contenedor3{
+    animation-name: ascenderYAparecer;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    float: left;
+    width: 30%;
+    height: 256px;
+    border-radius: 15px;
+    margin: 1%;
+    opacity: 0%;
+    padding-top: 8px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.contenedor1:hover, .contenedor2:hover, .contenedor3:hover{
+    margin-top: -.1px;
+}
+
+.contenedor1{
+    background-color: var(--oscuro);
+}
+
+.contenedor2{
+    background-color: var(--negro);
+    animation-delay: 0.5s;
+}
+
+.contenedor3{
+    background-color: var(--oscuro);
+    animation-delay: 1s;
+}
+
+/*Quienes somos*/
+.imagen{
+    background-color: var(--negro);
+    width: 384px;
+    height: 512px;
+    float: right;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.descripcion{
+    text-align: justify;
+    vertical-align: top;
+}
+
+.descripcion h2{
+    color: var(--oscuro);
+    font-size: 28px;
+}
+
+.descripcion p{
+    font-size: 20px;
+    color: var(--grisOscuro);
 }
 
 /*scrollbar*/
