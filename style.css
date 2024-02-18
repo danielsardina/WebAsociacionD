@@ -106,6 +106,24 @@ img{
     }
 }
 
+@keyframes aparecerDerecha{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes aparecerIzquierda{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
 /*---Menu superior---*/
 .menuSuperior{
     position: fixed;
@@ -118,6 +136,7 @@ img{
     background-color: var(--negro);
     padding-left: 20px;
     color: var(--blanco);
+    overflow-y: hidden;
 }
 
 .menuSuperiorBody img{
@@ -136,13 +155,13 @@ img{
 }
 
 .menuSuperiorBody nav a{
-    padding-right: 2vw;
-    padding-left: 2vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
     border-radius: 5px;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 16px;
     transition: all 0.5s;
 }
 
@@ -184,20 +203,6 @@ img{
     text-align: left;
 }
 
-/*---Menu Lateral---*/
-.menuLateral{
-    position: fixed;
-    margin-top: 80px;
-    width: 20%;
-    height: 100vh;
-}
-
-.menuLateralBody{
-    background-color: var(--gris);
-    padding-left: 20px;
-    color: var(--blanco);
-}
-
 /*---Main---*/
 .main{
     position: fixed;
@@ -234,7 +239,7 @@ img{
     font-size: 32px;
 }
 .mainBody p{
-    font-size: 24px;
+    font-size: 1.2vw;
 }
 
 .mainBody img{
@@ -371,20 +376,15 @@ img{
 }
 
 .categoria{
-    view-timeline-name: --categoria;
-    view-timeline-axis: block;
-    animation-timeline: --categoria;
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
-    animation-name: aparecer;
     width: 100%;
     height: 168px;
     border-radius: 15px;
     background-color: var(--blanco);
+    background: none;
     margin-left: auto;
     margin-right: auto;
     border-width: 3px;
-    border-color: var(--blanco);
+    border-color: rgba(255, 0, 0, 0);
     border-style: solid;
     transition-property: background-color, color;
     transition-duration: 1.5s;
@@ -400,7 +400,6 @@ img{
 
 .categoria h2{
     font-size: 24px;
-    margin-left: 5vw;
     margin-top: 60px;
     color: var(--negro);
     font-weight: bolder;
@@ -409,8 +408,41 @@ img{
 .categoria img{
     width: 128px;
     height: 128px;
-    float: left;
     margin: 20px;
+}
+
+.videojuegosContenedor tr td:nth-of-type(1){
+    view-timeline-name: --categoria;
+    view-timeline-axis: block;
+    animation-timeline: --categoria;
+    animation-range: entry 0% cover 30%;
+    animation-fill-mode: both;
+    animation-name: aparecerDerecha;
+}
+
+.videojuegosContenedor tr td:nth-of-type(2){
+    view-timeline-name: --categoria;
+    view-timeline-axis: block;
+    animation-timeline: --categoria;
+    animation-range: entry 0% cover 30%;
+    animation-fill-mode: both;
+    animation-name: aparecerIzquierda;
+}
+
+.videojuegosContenedor tr td:nth-of-type(1) img{
+    float: right;
+}
+
+.videojuegosContenedor tr td:nth-of-type(2) img{
+    float: left ;
+}
+
+.videojuegosContenedor tr td:nth-of-type(1) h2{
+    float: right;
+}
+
+.videojuegosContenedor tr td:nth-of-type(2) h2{
+    float: left;
 }
 
 /*---Registro---*/
@@ -667,6 +699,10 @@ img{
     height: 2460px;
 }
 
+.contenedorCrear h2{
+    text-align: center;
+}
+
 .contenedorInfo, .contenedorInfo2{
     animation-name: aparecerYExpandir;
     animation-duration: 1.5s;
@@ -698,6 +734,11 @@ img{
     animation-delay: 1s;
     animation-fill-mode: forwards;
     opacity: 0%;
+    font-size: 160%;
+}
+
+.contenedorInfo a, .contenedorInfo2 a{
+    color: var(--oscuro);
 }
 
 /*scrollbar*/
