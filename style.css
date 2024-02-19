@@ -1,37 +1,14 @@
-html{
-    --blanco: #ffffff;
-    --claro: #bbbbbb;
-    --oscuro: #cf2b15;
-    --negro: #2a2438;
-    --gris: #8d99ae;
-    --grisOscuro: #413b52;
+/*fuentes*/
+
+@font-face{
+    font-family: LemonMilk;
+    src: url(fuentes/LEMONMILK-Bold.otf);
+    font-weight: bold;
 }
 
-body{
-    margin: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-a{
-    color: var(--blanco);
-    text-decoration: none;
-}
-
-iframe{
-    border: none;
-    margin: 0;
-    float: left;
-}
-
-img{
-    image-rendering: pixelated;
-}
-
-.centrado{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+@font-face{
+    font-family: LemonMilk;
+    src: url(fuentes/LEMONMILK-Regular.otf);
 }
 
 /*Animaciones*/
@@ -122,6 +99,47 @@ img{
     to{
         transform: translateX(0%);
     }
+}
+
+html{
+    --blanco: #ffffff;
+    --claro: #bbbbbb;
+    --oscuro: #cf2b15;
+    --negro: #2a2438;
+    --gris: #8d99ae;
+    --grisOscuro: #413b52;
+}
+
+body{
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+iframe{
+    border: none;
+    margin: 0;
+    float: left;
+}
+
+img{
+    image-rendering: pixelated;
+}
+
+.centrado{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+h1, h2{
+    font-family: LemonMilk;
+    font-weight: normal;
 }
 
 /*---Menu superior---*/
