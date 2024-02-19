@@ -279,10 +279,12 @@ h1, h2{
     font-weight: bolder;
     color: var(--blanco);
     overflow: hidden;
+    text-shadow: #2a2438 5px 5px 5px;
 }
 
 .mainBody header{
-    background-color: var(--grisOscuro);
+    background-image: url(img/fondo.png);
+    background-size: contain;
     width: 100vw;
     height: 256px;
     margin-top: -44px;
